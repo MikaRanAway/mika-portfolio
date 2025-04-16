@@ -42,9 +42,14 @@ import { RouterLink, RouterView } from 'vue-router'
       ><div class="linkName">Exp</div></router-link
     >
   </div>
-  <RouterView />
+
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Fascinate+Inline&family=Lexend+Giga:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pirata+One&family=Special+Gothic+Condensed+One&display=swap');
 </style>
