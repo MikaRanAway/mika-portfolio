@@ -3,7 +3,7 @@
 
 <template>
   <main>
-    <div class="viewport">
+    <div class="wrapper">
       <div>Hello world</div>
     </div>
   </main>

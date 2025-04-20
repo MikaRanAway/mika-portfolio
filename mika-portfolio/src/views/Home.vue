@@ -4,7 +4,7 @@
       <section class="section">
         <img class="backgroundImg" src="../assets/backgroundPic.png" alt="background" />
         <div class="potraitWrapper">
-          <img class="potrait" src="../assets/mikaPlaceHolder.png" alt="mikaPhoto" />
+          <img class="potrait" src="../assets/mikaImg.png" alt="mikaPhoto" />
         </div>
         <div class="aboutContainer">
           <div class="textWrapper">

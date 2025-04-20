@@ -104,7 +104,8 @@
 .wrapper{
   width: 100vw;
   height: 90vh;
-  margin-top: 10dvh;
+  top: 10vh;
+  position: absolute;
 }
 
 .section {
@@ -146,41 +147,18 @@
   top: 8vh
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: all 0.8s ease;
-}
-
-.fade-enter-to, .fade-leave-from {
-  opacity: 1;
-}
-
-.fade-enter-from {
-  opacity: 0;
-}
-
-.fade-enter-to {
-  opacity: 1;
-}
-
-.fade-leave-from {
-  opacity: 1;
-}
-
-.fade-leave-to {
-  opacity: 0;
-}
-
 .potraitWrapper {
   display: flex;
   align-items: flex-end;
-  justify-content: right;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 .potrait {
   height:auto;
-  width: 80%;
+  width: 50%;
+  position: absolute;
 }
 
 .backgroundImg {
@@ -201,3 +179,149 @@
   width: 100%;
   height: 10vh;
 }
+
+.projectViewerPadding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.projectViewer {
+  max-height: 90vh;
+  height: 95%;
+  overflow-y: auto;
+  width: 84vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 50px;
+}
+
+.projectViewWrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.sectionHalf {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+}
+
+.arrow {
+  width: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s;
+  z-index: 1;
+  cursor: pointer;
+  height: 100%;
+}
+
+
+.arrowImg {
+  width: 80%;
+}
+
+.Left {
+  rotate: 180deg;
+}
+
+.projectImg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.arrowImg:hover {
+  animation: wiggle 0.8s ease-in-out infinite;
+}
+
+.projectTitle {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+  color: white;
+}
+
+.projectDefinition {
+  color: white;
+  font-size: 1.5vh;
+  white-space: pre-line;
+}
+
+.projectSubtitle {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4vh;
+  color: white;
+}
+
+.techImg {
+  width: 30px;
+  height: auto;
+}
+
+.techList {
+  display: flex;
+  gap: 20px;
+}
+
+
+.techItem {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.projectItem {
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  transition: 0.8s;
+  font-size: 13px;
+}
+
+.authorList {
+  display: flex;
+  gap: 10px;
+}
+
+.projectLink {
+  color: white;
+}
+
+.projectLink:hover{
+  text-decoration: underline;
+}
+
+.linkList {
+  display: flex;
+  gap: 20px;
+}
+
+.starBoxWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.star {
+  width: 10%;
+}
+
+.projectItem:hover {
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+
