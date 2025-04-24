@@ -10,6 +10,7 @@
     <router-link
       to="/home"
       class="nav-item home"
+      id="navItem"
       :class="{
         'home-active-home': $route.path === '/home',
         'projects-active-home': $route.path === '/projects',
@@ -19,6 +20,7 @@
     >
     <router-link
       to="/projects"
+      id="navItem"
       class="nav-item projects"
       :class="{
         'home-active-projects': $route.path === '/home',
@@ -29,6 +31,7 @@
     >
     <router-link
       to="/exp"
+      id="navItem"
       class="nav-item exp"
       :class="{
         'home-active-exp': $route.path === '/home',
@@ -47,26 +50,29 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Fascinate+Inline&family=Lexend+Giga:wght@100..900&family=Notable&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pirata+One&family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barrio&family=Bebas+Neue&family=Fascinate+Inline&family=Lexend+Giga:wght@100..900&family=Notable&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pirata+One&family=Pixelify+Sans:wght@400..700&family=Special+Gothic+Condensed+One&display=swap');
 </style>
+
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue'
 import router from './router'
 
-const enter = ref('animate__animated animate__fadeInLeft')
-const leave = ref('animate__animated animate__fadeOutRight')
+const enter = ref('animate__animated animate__slideInLeft')
+const leave = ref('animate__animated animate__slideOutRight')
 
 router.beforeEach((to, from, next) => {
+  const navItem = document.getElementById("navItem")
+
   // sliding left: moving forward
   if (
     (from.path === '/home' && to.path === '/projects') ||
     (from.path === '/projects' && to.path === '/exp') ||
     (from.path === '/home' && to.path === '/exp')
   ) {
-    enter.value = 'animate__animated animate__fadeInRight'
-    leave.value = 'animate__animated animate__fadeOutLeft'
+    enter.value = 'animate__animated animate__slideInRight'
+    leave.value = 'animate__animated animate__slideOutLeft'
   }
   // sliding right: moving backward
   else if (
@@ -74,10 +80,10 @@ router.beforeEach((to, from, next) => {
     (from.path === '/projects' && to.path === '/home') ||
     (from.path === '/exp' && to.path === '/home')
   ) {
-    enter.value = 'animate__animated animate__fadeInLeft'
-    leave.value = 'animate__animated animate__fadeOutRight'
+    enter.value = 'animate__animated animate__slideInLeft'
+    leave.value = 'animate__animated animate__slideOutRight'
   }
-
+  
   next()
 })
 </script>
